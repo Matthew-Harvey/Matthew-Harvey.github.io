@@ -48,13 +48,13 @@ body {
 }
 
 a {
-  color: rgb(63, 84, 139);
+  color: rgb(0, 53, 189);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: rgb(63, 84, 139);
+  color: rgb(22, 70, 190);
   outline: none;
   text-decoration: none;
 }
@@ -163,6 +163,16 @@ h1, h2, h3, h4, h5, h6, figure {
   background: #000;
   margin-right: -30px;
 }
+ {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+a:hover {
+  padding: 4px;
+  color: #46b8da; 
+}
+
 @media screen and (max-width: 768px) {
   #fh5co-header .display-tc h1,
   .fh5co-cover .display-tc h1 {
@@ -387,6 +397,7 @@ h1, h2, h3, h4, h5, h6, figure {
   zoom: 1;
   *display: inline;
 }
+
 #fh5co-about .fh5co-social-icons li a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -406,7 +417,9 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-about .fh5co-social-icons li a:hover {
   background: rgb(63, 84, 139);
 }
-
+#fh5co-about {
+  height: 400px;
+}
 .fh5co-heading {
   margin-bottom: 5em;
 }
