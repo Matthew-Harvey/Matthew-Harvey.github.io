@@ -5,11 +5,7 @@
   font-weight: normal;
   font-style: normal;
 }
-/* =======================================================
-*
-* 	Template Style 
-*
-* ======================================================= */
+
 body {
   font-family: "Space Mono", Arial, serif;
   font-weight: 400;
@@ -49,9 +45,9 @@ body {
 
 a {
   color: rgb(0, 53, 189);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 a:hover, a:active, a:focus {
   color: rgb(22, 70, 190);
