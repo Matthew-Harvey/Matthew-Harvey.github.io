@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
-@import url("fontawesome-all.min.css");
+@import url("../css/fontawesome-all.min.css");
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -65,6 +65,29 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+
+.row {
+	display: flex;
+	justify-content: space-between
+}
+
+.column {
+	display: inline-block;
+	width: 100%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+
+@media screen and (max-width: 600px) {
+	.column {
+	width: 100%;
+	}
+  }
 
 /* Basic */
 
@@ -2029,7 +2052,7 @@ input, select, textarea {
 
 		.main.style3 {
 			text-align: center;
-			padding: 6em 0 6em 0;
+			padding: 2em 0 2em 0;
 		}
 
 			.main.style3 .content > header {
@@ -2138,7 +2161,7 @@ input, select, textarea {
 
 			.main.style3 {
 				text-align: center;
-				padding: 3em 10px 3em 10px;
+				padding: 2em 4px 2em 4px;
 			}
 
 		}
@@ -2238,7 +2261,6 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/intro.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
@@ -2248,7 +2270,7 @@ input, select, textarea {
 /* One */
 
 	#one {
-		background: url("images/overlay.png"), url("../../images/one.jpg");
+		background-color: #e2eaec;
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -2257,7 +2279,6 @@ input, select, textarea {
 /* Two */
 
 	#two {
-		background: url("images/overlay.png"), url("../../images/two.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
