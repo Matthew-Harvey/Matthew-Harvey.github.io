@@ -17,6 +17,7 @@
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="2player.html">2 Player</a></li>
+						<li><a href="puzzle.html">Puzzles</a></li>
 						<li><a href="vscomputer.html">VS Computer</a></li>
 						<li><a href="2bots.html">2 Bots</a></li>
 						<li><a href="contact.html">Contact</a></li>
@@ -28,9 +29,15 @@
 				<div class="content">
 					<header>
 						<h2>2 Bots Playing Chess</h2>
-						<p>Watch Now!</p>
+						<p>Watch the worst game of chess now!</p>
 						<br></br>
 						<div id="chessboard" style="width: 100%"></div>
+						<br></br>
+						<label>Status:</label>
+						<div id=status></div>
+						<br></br>
+						<label>Position:</label>
+						<div id=fen></div>
 					</header>
 
 					<link rel="stylesheet" href="assets/css/chessboard-1.0.0.min.css">
@@ -41,6 +48,9 @@
 					<script>
 						var board = null
 						var game = new Chess()
+						var $status = $('#status')
+						var $fen = $('#fen')
+						var $pgn = $('#pgn')
 
 						function makeRandomMove () {
 						var possibleMoves = game.moves()
@@ -50,14 +60,50 @@
 
 						var randomIdx = Math.floor(Math.random() * possibleMoves.length)
 						game.move(possibleMoves[randomIdx])
+						updateStatus()
 						board.position(game.fen())
 
 						window.setTimeout(makeRandomMove, 500)
 						}
 
+						function updateStatus () {
+						var status = ''
+
+						var moveColor = 'White'
+						if (game.turn() === 'b') {
+							moveColor = 'Black'
+						}
+
+						// checkmate?
+						if (game.in_checkmate()) {
+							status = 'Game over, ' + moveColor + ' is in checkmate.'
+						}
+
+						// draw?
+						else if (game.in_draw()) {
+							status = 'Game over, drawn position'
+						}
+
+						// game still on
+						else {
+							status = moveColor + ' to move'
+
+							// check?
+							if (game.in_check()) {
+							status += ', ' + moveColor + ' is in check'
+							}
+						}
+
+						$status.html(status)
+						$fen.html(game.fen())
+						$pgn.html(game.pgn())
+						}
+
 						board = Chessboard('chessboard', 'start')
 
 						window.setTimeout(makeRandomMove, 500)
+
+						updateStatus()
 
 					</script>
 				</div>
