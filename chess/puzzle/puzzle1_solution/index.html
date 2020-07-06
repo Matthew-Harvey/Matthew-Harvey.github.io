@@ -32,6 +32,10 @@
 						<p>Black to move...</p>
 						<br></br>
 						<div id="chessboard" style="width: 100%"></div>
+						<button id=move1>Move 1</button>
+						<button id=move2>Move 2</button>
+						<button id=move3>Move 3</button>
+						<button id=move4>Move 4</button>
 					</header>
 
 					<link rel="stylesheet" href="../../assets/css/chessboard-1.0.0.min.css">
@@ -117,6 +121,22 @@
 
 						updateStatus()
 						
+						$('#move1').on('click', function () {
+						  board.position('8/1K3P2/4B3/P1RrR3/1Ppkp1P1/1p6/7p/r4b2')
+						})
+						
+						$('#move2').on('click', function () {
+						  board.position('8/1K3P2/8/P1RBR3/1Ppkp1P1/1p6/7p/r4b2')
+						})
+						
+						$('#move3').on('click', function () {
+						  board.position('8/1K3P2/4B3/P2RR3/1Ppkp1P1/1p6/7p/r4b2')
+						})
+						
+						$('#move4').on('click', function () {
+						  board.position('8/1K3P2/4B3/P1RR4/1Ppkp1P1/1p6/7p/r4b2')
+						})
+
 					</script>
 				</div>
 			</section>
