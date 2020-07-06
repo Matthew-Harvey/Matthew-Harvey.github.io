@@ -32,14 +32,12 @@
 						<p>Black to move...</p>
 						<br></br>
 						<div id="chessboard" style="width: 100%"></div>
+						<button id=startposition>Start Position</button>
 						<button id=move1>Move 1</button>
 						<button id=move2>Move 2</button>
 						<button id=move3>Move 3</button>
 						<button id=move4>Move 4</button>
-					<button id=move5>Move 5</button>
-					<button id=move6>Move 6</button>
-					<button id=move7>Move 7</button>
-					<button id=move8>Move 8</button>
+						<button id=move5>Move 5</button>
 					</header>
 
 					<link rel="stylesheet" href="../../assets/css/chessboard-1.0.0.min.css">
@@ -145,17 +143,11 @@
 						  board.position('8/1K3P2/8/P1RpR3/1Ppk2P1/1p6/7p/r4b2')
 						})
 						
-						$('#move6').on('click', function () {
-						  board.position('8/1K3P2/8/P1RpR3/1P1kp1P1/1p6/7p/r4b2')
+						$('#startposition').on('click', function () {
+						  board.position('8/1K3P2/3rB3/P1R1R3/1Ppkp1P1/1p6/7p/r4b2')
 						})
 						
-						$('#move7').on('click', function () {
-						  board.position('8/1K3P2/4B3/P2pR3/1Ppkp1P1/1p6/7p/r4b2')
-						})
-						
-						$('#move8').on('click', function () {
-						  board.position('8/1K3P2/8/P1Rp4/1P1kp1P1/1p6/7p/r4b2')
-						})
+	
 					</script>
 				</div>
 			</section>
