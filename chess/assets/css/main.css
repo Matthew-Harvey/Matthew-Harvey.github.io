@@ -66,7 +66,7 @@ input, select, textarea {
 	appearance: none;
 }
 
-li:hover:after {
+.nav li:hover:after {
     content: "";
     display: block;
     width: 10px;
