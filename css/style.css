@@ -1301,9 +1301,3 @@ input[type="text"] {
 }
 
 /*# sourceMappingURL=style.css.map */
-
-@media (max-width:629px) {
-  img#response {
-    display: none;
-  }
-}
