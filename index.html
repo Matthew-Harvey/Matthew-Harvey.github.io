@@ -76,7 +76,7 @@
 				<div class="col-md-7">
 					<ul class="info">
 						<li><span class="first-block">Name:</span><span class="second-block">Matthew Harvey</span></li>
-						<li><span class="first-block">Location:</span><span class="second-block">Leicester, England</span></li>
+						<li><span class="first-block">Location:</span><span class="second-block">Leicester, England <output id="dateandtime">Date</output></span></li>
 						<li><span class="first-block">CV:</span><span class="second-block"><a href="https://matthew-harvey.github.io/myCV.pdf" target="_blank"  rel="noopener">View</a></span></li>
 						<li><span class="first-block"><p>Email:</p></span><span class="second-block"><a href="mailto:matthewtlharvey@gmail.com" target="_top"  rel="noopener">matthewtlharvey@gmail.com</a></span></li>
 					</ul>
@@ -386,7 +386,13 @@
 		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
 	</div>
 
-
+	<script>
+		var today = new Date();
+		var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+		var time = today.getHours() + ":" + today.getMinutes() + "." + today.getSeconds();
+		var dateTime = time+' '+date;
+		document.getElementById("dateandtime").value = dateTime;
+	</script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
 	<script src="js/bootstrap.min.js"></script>
