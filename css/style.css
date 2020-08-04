@@ -323,6 +323,7 @@ a:hover {
 
 .info {
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
   width: 90%;
   float: left;
