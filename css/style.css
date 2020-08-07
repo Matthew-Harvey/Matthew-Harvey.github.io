@@ -1308,3 +1308,121 @@ input[type="text"] {
     display: none;
   }
 }
+
+.wrappper {
+  width: 100%;
+  margin: 0 auto;
+  }
+.wrappper:after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+
+
+#alphabet {
+    margin: 15px auto;
+    padding: 0;
+    max-width: 900px;
+    }
+#alphabet:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+#alphabet li {
+    float: left;
+    margin: 0 10px 10px 0;
+    list-style: none;
+    width: 50px;
+    height: 40px;
+    padding-top: 10px;
+    background: #fff;
+    color: #000000;
+    cursor: pointer;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border: solid 1px #fff;
+    }
+#alphabet li:hover {
+    background: #000000;
+    border: solid 1px #fff;
+    color: #fff;
+    }
+
+#my-word {
+    margin: 0;
+    display: block;
+    padding: 0;
+    display: block;
+    }
+
+#my-word li {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    display: inline-block;
+    font-size: 30px;
+    }
+
+#mylives {
+      font-size: 1.6em;
+      text-align: center;
+      display: block;
+      }
+
+.container-out {
+        font-family: "Fira Sans", sans-serif;
+        padding: 15px 0;
+      }
+
+.container-in {
+        width: 97%;
+        margin: 0 auto;
+      }
+.table-container {
+        margin: 10 auto;
+        text-align: center;
+      }
+
+.box {
+        min-width: 70px;
+        min-height: 85px;
+        background: #dee9ec;
+        text-align: center;
+        vertical-align: center;
+        font-size: 50px;
+        font-weight: 900;
+        cursor: pointer;
+      }
+
+.box:hover {
+        opacity: 0.7;
+      }
+
+.table-container h2 {
+        color: #0d8b70;
+        display: none;
+      }
+
+.table-container button {
+        border: none;
+        background: #13838b;
+        color: white;
+        border-radius: 3px;
+        padding: 5px 7px;
+        font-size: 18px;
+        cursor: pointer;
+        margin: 15px;
+      }
+
+.table-container button:hover {
+        opacity: 0.7;
+      }
+
+.table-container button:focus {
+        outline: none;
+      }

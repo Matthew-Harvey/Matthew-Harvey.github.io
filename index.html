@@ -429,7 +429,7 @@
 								<ul class="stuff">
 									<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal1">View</button>
 									<br></br>
-									<a style="font-size: 20px; margin: 10px;" href="https://github.com/Matthew-Harvey/matthew-harvey.github.io/tree/master/job_finder" target="_blank" rel="noopener">Github</a>
+									<a style="font-size: 20px; margin: 10px;" href="https://github.com/Matthew-Harvey/TicTacToe" target="_blank" rel="noopener">Github</a>
 								</ul>
 							</div> 
 						</div>
@@ -455,7 +455,7 @@
 								<ul class="stuff">
 									<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal3">View</button>
 									<br></br>
-									<a style="font-size: 20px; margin: 10px;" href="https://github.com/Matthew-Harvey/matthew-harvey.github.io/tree/master/job_finder" target="_blank" rel="noopener">Github</a>
+									<a style="font-size: 20px; margin: 10px;" href="https://github.com/Matthew-Harvey/Hangman" target="_blank" rel="noopener">Github</a>
 								</ul>
 							</div> 
 						</div>
@@ -468,7 +468,7 @@
 								<ul class="stuff">
 									<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Modal4">View</button>
 									<br></br>
-									<a style="font-size: 20px; margin: 10px;" href="https://github.com/Matthew-Harvey/matthew-harvey.github.io/tree/master/job_finder" target="_blank" rel="noopener">Github</a>
+									<a style="font-size: 20px; margin: 10px;" href="https://github.com/Matthew-Harvey/FizzBuzz" target="_blank" rel="noopener">Github</a>
 								</ul>
 							</div> 
 						</div>
@@ -480,7 +480,33 @@
 							<h4 class="modal-title">Tic Tac Toe</h4>
 						</div>
 						<div class="modal-body">
-							<p>The UI goes here...</p>
+							<div class="container-out">
+								<div class="container-in">
+								<div class="table-container">
+									<p>Player <span id="player">X</span> your turn</p>
+									<table align="center">
+									<tr>
+										<td><div class="box" width="50px" height="50px"></div></td>
+										<td><div class="box" width="50px" height="50px"></div></td>
+										<td><div class="box" width="50px" height="50px"></div></td>
+									</tr>
+									<tr>
+										<td><div class="box" width="50px" height="50px"></div></td>
+										<td><div class="box" width="50px" height="50px"></div></td>
+										<td><div class="box" width="50px" height="50px"></div></td>
+									</tr>
+									<tr>
+										<td><div class="box" width="50px" height="50px"></div></td>
+										<td><div class="box" width="50px" height="50px"></div></td>
+										<td><div class="box" width="50px" height="50px"></div></td>
+									</tr>
+									</table>
+							
+									<h2 id="message">Player <span id="winner"></span> Wins</h2>
+									<button id="reset">Reset</button>
+								</div>
+								</div>
+							</div>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -495,7 +521,7 @@
 								<h4 class="modal-title">Snake</h4>
 							</div>
 							<div id="modalbody" class="modal-body">
-								<canvas style="border: 1px solid grey;" id="game" width="555px" height="600px"></canvas>
+								<canvas style="border: 1px solid grey;" id="game" width="555px" height="600px">Device Not Compatible</canvas>
 							</div>
 							<div class="modal-footer">
 								<output id="size" style="float: left; margin-right: 30px;">Size: 4</output>
@@ -513,7 +539,20 @@
 								<h4 class="modal-title">Hangman</h4>
 							</div>
 							<div class="modal-body">
-								<p>The UI goes here...</p>
+								<div class="wrapper">
+									<div id="buttons">
+									</div>  
+									<p id="catagoryName"></p>
+									<div id="hold">
+									</div>
+									<p id="mylives"></p>
+									<p id="clue">Clue -</p>  
+									<canvas id="stickman">Device Not Compatible</canvas>
+									<div class="container">
+									<button id="hint">Hint</button>
+									<button id="reset">Play again</button>
+									</div>
+								</div>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -528,7 +567,21 @@
 								<h4 class="modal-title">Fizz Buzz</h4>
 							</div>
 							<div class="modal-body">
-								<p>The UI goes here...</p>
+								<p>Start Range: </p>
+								<input id="range1"></input>
+								<br></br>
+								<p>End Range:</p>
+								<input id="range2"></input>
+								<button onclick="run()">Enter</button>
+								<div id="end" class="expanded" style="overflow: auto;">
+								</div>
+								<br></br>
+								<p>Specific Number: </p>
+								<input id="num1"></input>
+								<button onclick="run2()">Enter</button>
+								<div id="end2" class="expanded" style="overflow: auto;">
+								</div>
+								<br></br>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -719,6 +772,380 @@
 	  
 		// start the game
 		requestAnimationFrame(loop);
+	</script>
+	<script>
+		window.onload = function () {
+   
+	   var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+		   'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+		   't', 'u', 'v', 'w', 'x', 'y', 'z'];
+   
+	   var categories;         // Array of topics
+	   var chosenCategory;     // Selected catagory
+	   var getHint ;          // Word getHint
+	   var word ;              // Selected word
+	   var guess ;             // Geuss
+	   var geusses = [ ];      // Stored geusses
+	   var lives ;             // Lives
+	   var counter ;           // Count correct geusses
+	   var space;              // Number of spaces in word '-'
+   
+	   // Get elements
+	   var showLives = document.getElementById("mylives");
+	   var showCatagory = document.getElementById("scatagory");
+	   var getHint = document.getElementById("hint");
+	   var showClue = document.getElementById("clue");
+   
+   
+   
+	   // create alphabet ul
+	   var buttons = function () {
+	   myButtons = document.getElementById('buttons');
+	   letters = document.createElement('ul');
+   
+	   for (var i = 0; i < alphabet.length; i++) {
+		   letters.id = 'alphabet';
+		   list = document.createElement('li');
+		   list.id = 'letter';
+		   list.innerHTML = alphabet[i];
+		   check();
+		   myButtons.appendChild(letters);
+		   letters.appendChild(list);
+	   }
+	   }
+	   
+   
+	   // Select Catagory
+	   var selectCat = function () {
+	   if (chosenCategory === categories[0]) {
+		   catagoryName.innerHTML = "The Chosen Category Is Premier League Football Teams";
+	   } else if (chosenCategory === categories[1]) {
+		   catagoryName.innerHTML = "The Chosen Category Is Films";
+	   } else if (chosenCategory === categories[2]) {
+		   catagoryName.innerHTML = "The Chosen Category Is Cities";
+	   }
+	   }
+   
+	   // Create geusses ul
+	   result = function () {
+	   wordHolder = document.getElementById('hold');
+	   correct = document.createElement('ul');
+   
+	   for (var i = 0; i < word.length; i++) {
+		   correct.setAttribute('id', 'my-word');
+		   guess = document.createElement('li');
+		   guess.setAttribute('class', 'guess');
+		   if (word[i] === "-") {
+		   guess.innerHTML = "-";
+		   space = 1;
+		   } else {
+		   guess.innerHTML = "_";
+		   }
+   
+		   geusses.push(guess);
+		   wordHolder.appendChild(correct);
+		   correct.appendChild(guess);
+	   }
+	   }
+   
+	   // Show lives
+	   comments = function () {
+	   showLives.innerHTML = "You have " + lives + " lives";
+	   if (lives < 1) {
+		   showLives.innerHTML = "Game Over";
+	   }
+	   for (var i = 0; i < geusses.length; i++) {
+		   if (counter + space === geusses.length) {
+		   showLives.innerHTML = "You Win!";
+		   }
+	   }
+	   }
+   
+		   // Animate man
+	   var animate = function () {
+	   var drawMe = lives ;
+	   drawArray[drawMe]();
+	   }
+   
+   
+	   // Hangman
+	   canvas =  function(){
+   
+	   myStickman = document.getElementById("stickman");
+	   context = myStickman.getContext('2d');
+	   context.beginPath();
+	   context.strokeStyle = "#000000";
+	   context.lineWidth = 2;
+	   };
+   
+	   head = function(){
+		   myStickman = document.getElementById("stickman");
+		   context = myStickman.getContext('2d');
+		   context.beginPath();
+		   context.arc(60, 25, 10, 0, Math.PI*2, true);
+		   context.stroke();
+	   }
+	   
+	   draw = function($pathFromx, $pathFromy, $pathTox, $pathToy) {
+	   
+	   context.moveTo($pathFromx, $pathFromy);
+	   context.lineTo($pathTox, $pathToy);
+	   context.stroke(); 
+	   }
+   
+	   frame1 = function() {
+	   draw (0, 150, 150, 150);
+	   };
+	   
+	   frame2 = function() {
+	   draw (10, 0, 10, 600);
+	   };
+   
+	   frame3 = function() {
+	   draw (0, 5, 70, 5);
+	   };
+   
+	   frame4 = function() {
+	   draw (60, 5, 60, 15);
+	   };
+   
+	   torso = function() {
+	   draw (60, 36, 60, 70);
+	   };
+   
+	   rightArm = function() {
+	   draw (60, 46, 100, 50);
+	   };
+   
+	   leftArm = function() {
+	   draw (60, 46, 20, 50);
+	   };
+   
+	   rightLeg = function() {
+	   draw (60, 70, 100, 100);
+	   };
+   
+	   leftLeg = function() {
+	   draw (60, 70, 20, 100);
+	   };
+   
+	   drawArray = [rightLeg, leftLeg, rightArm, leftArm,  torso,  head, frame4, frame3, frame2, frame1]; 
+   
+   
+	   // OnClick Function
+	   check = function () {
+	   list.onclick = function () {
+		   var geuss = (this.innerHTML);
+		   this.setAttribute("class", "active");
+		   this.onclick = null;
+		   for (var i = 0; i < word.length; i++) {
+		   if (word[i] === geuss) {
+			   geusses[i].innerHTML = geuss;
+			   counter += 1;
+		   } 
+		   }
+		   var j = (word.indexOf(geuss));
+		   if (j === -1) {
+		   lives -= 1;
+		   comments();
+		   animate();
+		   } else {
+		   comments();
+		   }
+	   }
+	   }
+   
+	   
+	   // Play
+	   play = function () {
+	   categories = [
+		   ["everton", "liverpool", "swansea", "chelsea", "hull", "manchester-city", "newcastle-united"],
+		   ["alien", "dirty-harry", "gladiator", "finding-nemo", "jaws"],
+		   ["manchester", "milan", "madrid", "amsterdam", "prague"]
+	   ];
+   
+	   chosenCategory = categories[Math.floor(Math.random() * categories.length)];
+	   word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
+	   word = word.replace(/\s/g, "-");
+	   buttons();
+   
+	   geusses = [ ];
+	   lives = 10;
+	   counter = 0;
+	   space = 0;
+	   result();
+	   comments();
+	   selectCat();
+	   canvas();
+	   }
+   
+	   play();
+   
+	   // Hint
+   
+	   hint.onclick = function() {
+   
+		   hints = [
+		   ["Based in Mersyside", "Based in Mersyside", "First Welsh team to reach the Premier Leauge", "Owned by A russian Billionaire", "Once managed by Phil Brown", "2013 FA Cup runners up", "Gazza's first club"],
+		   ["Science-Fiction horror film", "1971 American action film", "Historical drama", "Anamated Fish", "Giant great white shark"],
+		   ["Northern city in the UK", "Home of AC and Inter", "Spanish capital", "Netherlands capital", "Czech Republic capital"]
+	   ];
+   
+	   var catagoryIndex = categories.indexOf(chosenCategory);
+	   var hintIndex = chosenCategory.indexOf(word);
+	   showClue.innerHTML = "Clue: - " +  hints [catagoryIndex][hintIndex];
+	   };
+   
+	   // Reset
+   
+	   document.getElementById('reset').onclick = function() {
+	   correct.parentNode.removeChild(correct);
+	   letters.parentNode.removeChild(letters);
+	   showClue.innerHTML = "";
+	   context.clearRect(0, 0, 400, 400);
+	   play();
+	   }
+	   }
+	</script>
+	<script>
+		function run() {
+			var column = document.getElementById('end');
+			var rangelow = document.getElementById('range1').value;
+			var rangehigh = document.getElementById('range2').value;
+			column.innerHTML = ""
+			for (var i=rangelow; i<=rangehigh; i++) {
+				if (i % 3 === 0 && i % 5 === 0) {
+					column.innerHTML += " fizzbuzz ";
+				} else if (i % 3 === 0) {
+					column.innerHTML += " fizz ";
+				} else if (i % 5 === 0) {
+					column.innerHTML += " buzz ";
+				} else {
+					column.innerHTML += " " + i + " ";
+				}
+			}
+		}
+		function run2() {
+			var column2 = document.getElementById('end2');
+			var num = document.getElementById('num1').value;
+			column2.innerHTML = ""
+			if (num % 3 === 0 && num % 5 === 0) {
+				column2.innerHTML += " fizzbuzz ";
+			} else if (num % 3 === 0) {
+				column2.innerHTML += " fizz ";
+			} else if (num % 5 === 0) {
+				column2.innerHTML += " buzz ";
+			} else {
+				column2.innerHTML += " " + num + " ";
+				}
+		}
+	</script>
+	<script>
+		let currentPlayer = "x";
+
+		//stores the status of the game, whether its over or still in play
+		let gameStatus = "Game On";
+
+		//Gets all Boxes elements
+		const boxes = document.getElementsByClassName("box");
+
+		//loops through all the elements
+		for (let i = 0; i < boxes.length; i++) {
+		//adds event listener to each box;
+		boxes[i].addEventListener("click", function() {
+			//checks if the box has an x or an o in it and also checks if the game is still on
+			if (boxes[i].innerHTML.trim() == "" && gameStatus == "Game On") {
+			//adds x or o for the current play in their choosen box
+			boxes[i].innerHTML = currentPlayer;
+
+			//changes player turns
+			currentPlayer = currentPlayer == "x" ? "o" : "x";
+
+			//changes player's turn label on top of the game
+			document.getElementById(
+				"player"
+			).innerHTML = currentPlayer.toUpperCase();
+
+			//checks 3 matching x's or o's
+			if (
+				boxes[0].innerHTML == boxes[1].innerHTML &&
+				boxes[1].innerHTML == boxes[2].innerHTML &&
+				boxes[0].innerHTML.trim() != ""
+			) {
+				showWinner(0, 1, 2);
+			} else if (
+				boxes[3].innerHTML == boxes[4].innerHTML &&
+				boxes[4].innerHTML == boxes[5].innerHTML &&
+				boxes[3].innerHTML.trim() != ""
+			) {
+				showWinner(3, 4, 5);
+			} else if (
+				boxes[6].innerHTML == boxes[7].innerHTML &&
+				boxes[7].innerHTML == boxes[8].innerHTML &&
+				boxes[6].innerHTML.trim() != ""
+			) {
+				showWinner(6, 7, 8);
+			} else if (
+				boxes[0].innerHTML == boxes[3].innerHTML &&
+				boxes[3].innerHTML == boxes[6].innerHTML &&
+				boxes[0].innerHTML.trim() != ""
+			) {
+				showWinner(0, 3, 6);
+			} else if (
+				boxes[1].innerHTML == boxes[4].innerHTML &&
+				boxes[4].innerHTML == boxes[7].innerHTML &&
+				boxes[1].innerHTML.trim() != ""
+			) {
+				showWinner(1, 4, 7);
+			} else if (
+				boxes[2].innerHTML == boxes[5].innerHTML &&
+				boxes[5].innerHTML == boxes[8].innerHTML &&
+				boxes[2].innerHTML.trim() != ""
+			) {
+				showWinner(2, 5, 8);
+			} else if (
+				boxes[0].innerHTML == boxes[4].innerHTML &&
+				boxes[4].innerHTML == boxes[8].innerHTML &&
+				boxes[0].innerHTML.trim() != ""
+			) {
+				showWinner(0, 4, 8);
+			} else if (
+				boxes[2].innerHTML == boxes[4].innerHTML &&
+				boxes[4].innerHTML == boxes[6].innerHTML &&
+				boxes[2].innerHTML.trim() != ""
+			) {
+				showWinner(2, 4, 6);
+			}
+			}
+		});
+		}
+
+		//resets the game
+		document.getElementById("reset").addEventListener("click", function() {
+		for (let i = 0; i < boxes.length; i++) {
+			boxes[i].innerHTML = "";
+			boxes[i].style.backgroundColor = "#dee9ec";
+			boxes[i].style.color = "black";
+		}
+		currentPlayer = "x";
+		document.getElementById("message").style.display = "none";
+		document.getElementById("player").innerHTML = "X";
+		gameStatus = "Game On";
+		});
+
+		//displays the winner
+		function showWinner(x, y, z) {
+		boxes[x].style.background = "#0d8b70";
+		boxes[x].style.color = "white";
+		boxes[y].style.background = "#0d8b70";
+		boxes[y].style.color = "white";
+		boxes[z].style.background = "#0d8b70";
+		boxes[z].style.color = "white";
+		document.getElementById("winner").innerHTML =
+			currentPlayer == "x" ? "O" : "X";
+		document.getElementById("message").style.display = "block";
+		gameStatus = "Game Over";
+		}
 	</script>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
