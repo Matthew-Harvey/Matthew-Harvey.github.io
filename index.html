@@ -490,12 +490,12 @@
 					</div>
 					<div id="Modal2" class="modal fade" role="dialog">
 						<div class="modal-dialog">
-							<div class="modal-content">
+							<div id="modalcontent" class="modal-content">
 							<div class="modal-header">
 								<h4 class="modal-title">Snake</h4>
 							</div>
-							<div class="modal-body">
-								<canvas style="border: 1px solid black;" width="550px" height="600px" id="game"></canvas>
+							<div id="modalbody" class="modal-body">
+								<canvas style="border: 1px solid grey;" id="game" width="555px" height="600px"></canvas>
 							</div>
 							<div class="modal-footer">
 								<output id="size" style="float: left; margin-right: 30px;">Size: 4</output>
@@ -613,20 +613,32 @@
 		  snake.y += snake.dy;
 	  
 		  // wrap snake position horizontally on edge of screen
-		  if (snake.x < 0) {
-			snake.x = canvas.width - grid;
-		  }
-		  else if (snake.x >= canvas.width) {
-			snake.x = 0;
-		  }
+		  if (snake.x < 0 || snake.x >= canvas.width) {
+				snake.x = 160;
+				snake.highscore.unshift(snake.cells.length)
+				snake.y = 160;
+				snake.cells = [];
+				snake.maxCells = 4;
+				snake.dx = grid;
+				snake.dy = 0;
+	  
+				apple.x = getRandomInt(0, 25) * grid;
+				apple.y = getRandomInt(0, 25) * grid;
+			  }
 		  
 		  // wrap snake position vertically on edge of screen
-		  if (snake.y < 0) {
-			snake.y = canvas.height - grid;
-		  }
-		  else if (snake.y >= canvas.height) {
-			snake.y = 0;
-		  }
+		  if (snake.y < 0 || snake.y >= canvas.height) {
+				snake.x = 160;
+				snake.highscore.unshift(snake.cells.length)
+				snake.y = 160;
+				snake.cells = [];
+				snake.maxCells = 4;
+				snake.dx = grid;
+				snake.dy = 0;
+	  
+				apple.x = getRandomInt(0, 25) * grid;
+				apple.y = getRandomInt(0, 25) * grid;
+			  }
 	  
 		  // keep track of where snake has been. front of the array is always the head
 		  snake.cells.unshift({x: snake.x, y: snake.y});

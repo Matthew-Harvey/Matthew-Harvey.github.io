@@ -1302,3 +1302,9 @@ input[type="text"] {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+@media screen and (max-width: 768px) {
+  .modal-body {
+    display: none;
+  }
+}
