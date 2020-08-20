@@ -22,7 +22,6 @@ body {
 
 #page {
   position: relative;
-  overflow-x: hidden;
   width: 100%;
   height: 100%;
   -webkit-transition: 0.5s;
@@ -30,7 +29,6 @@ body {
   transition: 0.5s;
 }
 .offcanvas #page {
-  overflow: hidden;
   position: absolute;
 }
 
@@ -726,7 +724,6 @@ a:hover {
   height: 270px;
   width: 100%;
   display: table;
-  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .work {
@@ -968,9 +965,6 @@ a:hover {
   }
 }
 
-.fh5co-video {
-  overflow: hidden;
-}
 @media screen and (max-width: 992px) {
   .fh5co-video {
     height: 450px;

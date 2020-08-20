@@ -100,10 +100,6 @@ img {
   border: 0;
 }
 
-svg:not(:root) {
-  overflow: hidden;
-}
-
 figure {
   margin: 1em 40px;
 }
@@ -111,10 +107,6 @@ figure {
 hr {
   box-sizing: content-box;
   height: 0;
-}
-
-pre {
-  overflow: auto;
 }
 
 code,
@@ -133,10 +125,6 @@ textarea {
   color: inherit;
   font: inherit;
   margin: 0;
-}
-
-button {
-  overflow: visible;
 }
 
 button,
@@ -197,10 +185,6 @@ fieldset {
 legend {
   border: 0;
   padding: 0;
-}
-
-textarea {
-  overflow: auto;
 }
 
 optgroup {
@@ -401,7 +385,6 @@ hr {
   height: 1px;
   margin: -1px;
   padding: 0;
-  overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
@@ -411,7 +394,6 @@ hr {
   width: auto;
   height: auto;
   margin: 0;
-  overflow: visible;
   clip: auto;
 }
 
@@ -727,8 +709,6 @@ dd {
     width: 160px;
     clear: left;
     text-align: right;
-    overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap;
   }
   .dl-horizontal dd {
@@ -856,7 +836,6 @@ pre code {
 
 .pre-scrollable {
   max-height: 340px;
-  overflow-y: scroll;
 }
 
 .container {
@@ -1943,15 +1922,12 @@ table th[class*="col-"] {
 }
 
 .table-responsive {
-  overflow-x: auto;
   min-height: 0.01%;
 }
 @media screen and (max-width: 767px) {
   .table-responsive {
     width: 100%;
     margin-bottom: 15px;
-    overflow-y: hidden;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #ddd;
   }
   .table-responsive > .table {
@@ -2932,7 +2908,6 @@ tbody.collapse.in {
 .collapsing {
   position: relative;
   height: 0;
-  overflow: hidden;
   -webkit-transition-property: height, visibility;
   transition-property: height, visibility;
   -webkit-transition-duration: 0.35s;
@@ -2990,7 +2965,6 @@ tbody.collapse.in {
 .dropdown-menu .divider {
   height: 1px;
   margin: 9px 0;
-  overflow: hidden;
   background-color: #e5e5e5;
 }
 .dropdown-menu > li > a {
@@ -3456,7 +3430,6 @@ tbody.collapse.in {
 .nav .nav-divider {
   height: 1px;
   margin: 9px 0;
-  overflow: hidden;
   background-color: #e5e5e5;
 }
 .nav > li > a > img {
@@ -3607,12 +3580,10 @@ tbody.collapse.in {
 }
 
 .navbar-collapse {
-  overflow-x: visible;
   padding-right: 15px;
   padding-left: 15px;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  -webkit-overflow-scrolling: touch;
 }
 .navbar-collapse:before, .navbar-collapse:after {
   content: " ";
@@ -3621,9 +3592,7 @@ tbody.collapse.in {
 .navbar-collapse:after {
   clear: both;
 }
-.navbar-collapse.in {
-  overflow-y: auto;
-}
+
 @media (min-width: 768px) {
   .navbar-collapse {
     width: auto;
@@ -3634,11 +3603,8 @@ tbody.collapse.in {
     display: block !important;
     height: auto !important;
     padding-bottom: 0;
-    overflow: visible !important;
   }
-  .navbar-collapse.in {
-    overflow-y: visible;
-  }
+
   .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
     padding-left: 0;
     padding-right: 0;
@@ -4541,7 +4507,6 @@ a.thumbnail.active {
   }
 }
 .progress {
-  overflow: hidden;
   height: 20px;
   margin-bottom: 20px;
   background-color: #f5f5f5;
@@ -4627,7 +4592,6 @@ a.thumbnail.active {
 .media,
 .media-body {
   zoom: 1;
-  overflow: hidden;
 }
 
 .media-body {
@@ -5243,7 +5207,6 @@ button.list-group-item-danger.active:focus {
   display: block;
   height: 0;
   padding: 0;
-  overflow: hidden;
 }
 .embed-responsive .embed-responsive-item,
 .embed-responsive iframe,
@@ -5318,20 +5281,15 @@ button.close {
   -webkit-appearance: none;
 }
 
-.modal-open {
-  overflow: hidden;
-}
 
 .modal {
   display: none;
-  overflow: hidden;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1050;
-  -webkit-overflow-scrolling: touch;
   outline: 0;
 }
 .modal.fade .modal-dialog {
@@ -5349,11 +5307,6 @@ button.close {
   -ms-transform: translate(0, 0);
   -o-transform: translate(0, 0);
   transform: translate(0, 0);
-}
-
-.modal-open .modal {
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .modal-dialog {
@@ -5440,7 +5393,6 @@ button.close {
   top: -9999px;
   width: 50px;
   height: 50px;
-  overflow: scroll;
 }
 
 @media (min-width: 768px) {
@@ -5724,7 +5676,6 @@ button.close {
 
 .carousel-inner {
   position: relative;
-  overflow: hidden;
   width: 100%;
 }
 .carousel-inner > .item {
