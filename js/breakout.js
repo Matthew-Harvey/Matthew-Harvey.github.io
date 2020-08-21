@@ -1,5 +1,5 @@
 function run5 () {
-    var canvas = document.getElementById("myCanvas");
+    var canvas = document.getElementById("canvas5");
     var ctx = canvas.getContext("2d");
     var ballRadius = 9;
     var x = canvas.width/2;
