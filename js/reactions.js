@@ -7,9 +7,7 @@ function getRandomColor() {
     } //ends for loop 
     return color; 
 
-
 } // ends getRandomColor Function
-
 
 var clickedTime; var createdTime; var reactionTime; 
 
