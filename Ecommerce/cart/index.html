@@ -332,7 +332,7 @@
                 cartnumber.appendChild(tdremove);
 
                 var removebutton = document.createElement("button");
-                removebutton.onclick = ""
+                removebutton.onclick = function () { cartnumber.remove(); localStorage.removeItem(itemid);}
                 tdremove.appendChild(removebutton);
 
                 var removebuttoni = document.createElement("i");
