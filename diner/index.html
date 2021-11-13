@@ -202,8 +202,8 @@
               menuitemprice.appendChild(h4wrap2);
 
               var ongoingcount = 0
-              Object.keys(localStorage).forEach(function(key){
-                var keyhold = localStorage.getItem(key);
+              Object.keys(sessionStorage).forEach(function(key){
+                var keyhold = sessionStorage.getItem(key);
                 if (item[0] == key) {
                   var itemsplit = keyhold.split("£");
                   ongoingcount = parseInt(itemsplit[0]);
@@ -211,13 +211,13 @@
               });
               if (ongoingcount == 0) {
                 var addbutton = document.createElement("button");
-                addbutton.onclick = function () {ongoingcount+=1; addbutton.innerHTML = "ADDED " + ongoingcount + " ✓"; localStorage.setItem(item[0], ongoingcount.toString()+item[1])};
+                addbutton.onclick = function () {ongoingcount+=1; addbutton.innerHTML = "ADDED " + ongoingcount + " ✓"; sessionStorage.setItem(item[0], ongoingcount.toString()+item[1])};
                 addbutton.innerHTML = "ADD TO ORDER"
                 makemenu.appendChild(addbutton);
               }
               else {
                 var addbutton = document.createElement("button");
-                addbutton.onclick = function () {ongoingcount+=1; addbutton.innerHTML = "ADDED " + ongoingcount + " ✓"; localStorage.setItem(item[0], ongoingcount.toString()+item[1])};
+                addbutton.onclick = function () {ongoingcount+=1; addbutton.innerHTML = "ADDED " + ongoingcount + " ✓"; sessionStorage.setItem(item[0], ongoingcount.toString()+item[1])};
                 addbutton.innerHTML = "ADDED " + ongoingcount + " ✓";
                 makemenu.appendChild(addbutton);
               }
@@ -289,8 +289,8 @@
 
             var totalcost = 0;
 
-            Object.keys(localStorage).forEach(function(key){
-                var item = localStorage.getItem(key);
+            Object.keys(sessionStorage).forEach(function(key){
+                var item = sessionStorage.getItem(key);
                 var itemsplit = item.split("£");
 
                 totalcost += parseFloat(itemsplit[1]);
