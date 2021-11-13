@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parallax Diner</title>
+<meta name="description" content="This is a sample restaurant site for buisness to show off menu, food pictures and order online.">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/hereicon.jpg" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/hereicon.jpg">
+<link rel="apple-touch-icon" sizes="72x72" href="img/hereicon.jpg">
+<link rel="apple-touch-icon" sizes="114x114" href="img/hereicon.jpg">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rochester&display=swap" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<!-- Navigation
+    ==========================================-->
+<nav id="menu" class="navbar navbar-default navbar-fixed-top" style="width:'100vh';">
+  <div class="container" style="width: '100vh';">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header" style="width:'100vh';">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="width: '100vh';">
+      <ul class="nav navbar-nav" style="width:'100vh';">
+        <li><a href="#order" class="page-scroll">Order</a></li>
+        <li><a href="#features" class="page-scroll">Specials</a></li>
+        <li><a href="#restaurant-menu" class="page-scroll">Menu</a></li>
+        <li><a href="#about" class="page-scroll">About</a></li>
+        <li><a href="#contact" class="page-scroll">Contact</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+</nav>
+<!-- Header -->
+<header id="header" style="width:'100vh';">
+  <div class="intro">
+    <div class="overlay">
+      <div class="container">
+        <div class="row">
+          <div class="intro-text">
+            <h1>Parallax Diner</h1>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<script>
+  function loadFile(filePath) {
+    var result = null;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", filePath, false);
+    xmlhttp.send();
+    if (xmlhttp.status==200) {
+      result = xmlhttp.responseText;
+    }
+    return result;
+  }
+
+  alltext = loadFile("stock.txt");
+  newarr = new Array(5);
+  alltext = alltext.toString();
+  alltext = alltext.replace(/(\r\n|\n|\r)/gm,"");
+  alltext = alltext.split("_");
+  alltext.forEach(element => {
+    element = element.split(";");
+    newarr.push(element);
+  });
+  newarr = newarr.splice(5);  
+  
+</script>
+<!-- Order Section -->
+<div id="order" class="text-center" style="width:'100vh'; padding-top: 50px; padding-bottom: 50px;">
+  <div class="container">
+    <div class="section-title">
+      <h2>Order Here</h2>
+    </div>
+    <div id="ordersection" class="row" style="border: 2px solid grey;">
+      <h3 style="padding-bottom: 10px;">Select Items</h3>
+      <div class="col-xs-6 col-sm-2">
+        <button type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(0, newarr)">Specials</button>
+      </div>
+      <div class="col-xs-6 col-sm-2">
+        <button type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(1, newarr)">Starters</button>
+      </div>
+      <div class="col-xs-6 col-sm-2">
+        <button type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(2, newarr)">Mains</button>
+      </div>
+      <div class="col-xs-6 col-sm-2">
+        <button type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(3, newarr)">Desserts</button>
+      </div>
+      <div class="col-xs-6 col-sm-2">
+        <button type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(4, newarr)">Drinks</button>
+      </div>
+      <div class="col-xs-6 col-sm-2">
+        <button type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(5, newarr)">My Order</button>
+      </div>
+      <div id="container1" class="container" style="padding-top: 80px; padding-bottom: 0px;">
+        <h2 id="mainname">Specials</h2>
+      </div>
+      <br></br>
+      <script>
+        var makemenuhold = document.createElement("div");
+        makemenuhold.id = "menuholder";
+        container1.appendChild(makemenuhold);
+
+        popoutoptions(0, newarr);
+
+        function popoutoptions(sectionnum, newarr) {
+          sectionnum = sectionnum.toString();
+          if (sectionnum == "0") {
+            mainname.innerHTML = "Specials";
+            showitems(sectionnum, newarr);
+          }
+          if (sectionnum == "1") {
+            mainname.innerHTML = "Starters";
+            showitems(sectionnum, newarr);
+          }
+
+          if (sectionnum == "2") {
+            mainname.innerHTML = "Mains";
+            showitems(sectionnum, newarr);
+          }
+          if (sectionnum == "3") {
+            mainname.innerHTML = "Desserts";
+            showitems(sectionnum, newarr);
+          }
+          if (sectionnum == "4") {
+            mainname.innerHTML = "Drinks";
+            showitems(sectionnum, newarr);
+          }
+          if (sectionnum == "5") {
+            mainname.innerHTML = "My Order";
+            showorder(sectionnum, newarr);
+          }
+
+          function showitems(sectionnum, newarr) {
+            var content = newarr[sectionnum];
+
+            const myNode = document.getElementById("menuholder");
+            while (myNode.firstChild) {
+              myNode.removeChild(myNode.lastChild);
+            }
+
+            content.forEach(item => {
+              
+              item = item.split(",")
+
+              var makemenu = document.createElement("div");
+              makemenu.classList.add('menu-item');
+              makemenu.id = "eachmenu";
+              makemenuhold.appendChild(makemenu);
+
+              var brgap = document.createElement("br");
+              makemenu.appendChild(brgap);
+
+              var menuitemname = document.createElement("div");
+              menuitemname.classList.add('menu-item-name');
+              makemenu.appendChild(menuitemname);
+              var h4wrap = document.createElement("h5");
+              h4wrap.innerHTML = item[0];
+              menuitemname.appendChild(h4wrap);
+
+              var menuitemprice = document.createElement("div");
+              menuitemprice.classList.add('menu-item-price');
+              makemenu.appendChild(menuitemprice);
+              var h4wrap2 = document.createElement("h5");
+              h4wrap2.innerHTML = item[1];
+              menuitemprice.appendChild(h4wrap2);
+
+              var ongoingcount = 0
+              Object.keys(localStorage).forEach(function(key){
+                var keyhold = localStorage.getItem(key);
+                if (item[0] == key) {
+                  var itemsplit = keyhold.split("£");
+                  ongoingcount = parseInt(itemsplit[0]);
+                }
+              });
+              if (ongoingcount == 0) {
+                var addbutton = document.createElement("button");
+                addbutton.onclick = function () {ongoingcount+=1; addbutton.innerHTML = "ADDED " + ongoingcount + " ✓"; localStorage.setItem(item[0], ongoingcount.toString()+item[1])};
+                addbutton.innerHTML = "ADD TO ORDER"
+                makemenu.appendChild(addbutton);
+              }
+              else {
+                var addbutton = document.createElement("button");
+                addbutton.onclick = function () {ongoingcount+=1; addbutton.innerHTML = "ADDED " + ongoingcount + " ✓"; localStorage.setItem(item[0], ongoingcount.toString()+item[1])};
+                addbutton.innerHTML = "ADDED " + ongoingcount + " ✓";
+                makemenu.appendChild(addbutton);
+              }
+            });
+          }
+
+          function showorder(sectionnum, newarr) {
+            const myNode = document.getElementById("menuholder");
+            while (myNode.firstChild) {
+              myNode.removeChild(myNode.lastChild);
+            }
+
+            var makemenu = document.createElement("div");
+            makemenu.classList.add('menu-item');
+            makemenu.classList.add('row');
+            makemenu.id = "eachmenu";
+            makemenuhold.appendChild(makemenu);
+
+            var brgap = document.createElement("br");
+            makemenu.appendChild(brgap);
+
+            var namecolumn = document.createElement("div");
+            namecolumn.classList.add('col-lg-4');
+            namecolumn.classList.add('col-sm-12');
+            namecolumn.classList.add('col-md-12');
+            namecolumn.id = "eachmenu";
+            makemenuhold.appendChild(namecolumn);
+
+            var pricecolumn = document.createElement("div");
+            pricecolumn.classList.add('col-lg-4');
+            pricecolumn.classList.add('col-sm-12');
+            pricecolumn.classList.add('col-md-12');
+            pricecolumn.id = "eachmenu";
+            makemenuhold.appendChild(pricecolumn);
+
+            var quantcolumn = document.createElement("div");
+            quantcolumn.classList.add('col-lg-4');
+            quantcolumn.classList.add('col-sm-12');
+            quantcolumn.classList.add('col-md-12');
+            quantcolumn.id = "eachmenu";
+            makemenuhold.appendChild(quantcolumn);
+
+            var menuitemname = document.createElement("div");
+            menuitemname.classList.add('menu-item-name');
+            namecolumn.appendChild(menuitemname);
+            var h4wrap = document.createElement("h4");
+            menuitemname.appendChild(h4wrap);
+            var underline1 = document.createElement("u");
+            underline1.innerHTML = "NAME";
+            h4wrap.appendChild(underline1);
+
+            var menuitemprice = document.createElement("div");
+            menuitemprice.classList.add('menu-item-price');
+            pricecolumn.appendChild(menuitemprice);
+            var h4wrap2 = document.createElement("h4");
+            menuitemprice.appendChild(h4wrap2);
+            var underline2 = document.createElement("u");
+            underline2.innerHTML = "PRICE";
+            h4wrap2.appendChild(underline2);
+
+            var menuitemquant = document.createElement("div");
+            menuitemquant.classList.add('menu-item-quant');
+            quantcolumn.appendChild(menuitemquant);
+            var h4wrap3 = document.createElement("h4");
+            menuitemquant.appendChild(h4wrap3);
+            var underline3 = document.createElement("u");
+            underline3.innerHTML = "QUANTITY";
+            h4wrap3.appendChild(underline3);
+
+            var totalcost = 0;
+
+            Object.keys(localStorage).forEach(function(key){
+                var item = localStorage.getItem(key);
+                var itemsplit = item.split("£");
+
+                totalcost += parseFloat(itemsplit[1]);
+                var itemprice = "£" + itemsplit[1];
+                var itemquant = itemsplit[0];
+
+                var makemenu = document.createElement("div");
+                makemenu.classList.add('menu-item');
+                makemenu.classList.add('row');
+                makemenu.id = "eachmenu";
+                makemenuhold.appendChild(makemenu);
+
+                var brgap = document.createElement("br");
+                makemenu.appendChild(brgap);
+
+                var namecolumn = document.createElement("div");
+                namecolumn.classList.add('col-lg-4');
+                namecolumn.classList.add('col-sm-12');
+                namecolumn.classList.add('col-md-12');
+                namecolumn.id = "eachmenu";
+                makemenuhold.appendChild(namecolumn);
+
+                var pricecolumn = document.createElement("div");
+                pricecolumn.classList.add('col-lg-4');
+                pricecolumn.classList.add('col-sm-12');
+                pricecolumn.classList.add('col-md-12');
+                pricecolumn.id = "eachmenu";
+                makemenuhold.appendChild(pricecolumn);
+
+                var quantcolumn = document.createElement("div");
+                quantcolumn.classList.add('col-lg-4');
+                quantcolumn.classList.add('col-sm-12');
+                quantcolumn.classList.add('col-md-12');
+                quantcolumn.id = "eachmenu";
+                makemenuhold.appendChild(quantcolumn);
+
+                var menuitemname = document.createElement("div");
+                menuitemname.classList.add('menu-item-name');
+                namecolumn.appendChild(menuitemname);
+                var h4wrap = document.createElement("h5");
+                h4wrap.innerHTML = key;
+                menuitemname.appendChild(h4wrap);
+
+                var menuitemprice = document.createElement("div");
+                menuitemprice.classList.add('menu-item-price');
+                pricecolumn.appendChild(menuitemprice);
+                var h4wrap2 = document.createElement("h5");
+                h4wrap2.innerHTML = itemprice;
+                menuitemprice.appendChild(h4wrap2);
+
+                var menuitemquant = document.createElement("div");
+                menuitemquant.classList.add('menu-item-quant');
+                quantcolumn.appendChild(menuitemquant);
+                var h4wrap = document.createElement("h5");
+                h4wrap.innerHTML = itemquant;
+                menuitemquant.appendChild(h4wrap);
+            });
+
+            var totalmenu = document.createElement("div");
+            totalmenu.classList.add('menu-item');
+            totalmenu.classList.add('row');
+            totalmenu.id = "totalmenu";
+            makemenuhold.appendChild(totalmenu);
+
+            var brgap2 = document.createElement("br");
+            totalmenu.appendChild(brgap2);
+
+            var brgap2 = document.createElement("br");
+            totalmenu.appendChild(brgap2);
+
+            var brgap2 = document.createElement("br");
+            totalmenu.appendChild(brgap2);
+
+            var totaltext = document.createElement("h4");
+            totaltext.innerHTML = "TOTAL";
+            totalmenu.appendChild(totaltext);
+
+            var totaltext = document.createElement("h4");
+            totaltext.innerHTML = "£" + totalcost.toFixed(2);
+            totalmenu.appendChild(totaltext);
+          }
+        }
+      </script>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- Gallery Section -->
+<div id="gallery" style="width: '100vh';">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6 col-md-3">
+        <div class="gallery-item"> <img src="img/gallery/01.jpg" class="img-responsive" alt=""></div>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <div class="gallery-item"> <img src="img/gallery/02.jpg" class="img-responsive" alt=""></div>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <div class="gallery-item"> <img src="img/gallery/03.jpg" class="img-responsive" alt=""></div>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <div class="gallery-item"> <img src="img/gallery/04.jpg" class="img-responsive" alt=""></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Features Section -->
+<div id="features" class="text-center" style="width:'100vh'; padding-top: 50px; padding-bottom: 50px;">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Specials</h2>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <div class="features-item">
+          <h3>Lamb Steak</h3>
+          <img src="img/specials/1.jpg" class="img-responsive" alt="special1">
+          <p>Beautifully thick and cultured steak cut to the loin, accompanied with a scrumcious salad.</p>
+          <p>£16.48</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="features-item">
+          <h3>Buttermilk Jamaican Stack</h3>
+          <img src="img/specials/2.jpg" class="img-responsive" alt="special2">
+          <p>Jerk chicken, fruitly topped, gorgeously crispy, beautifully succulent on the inside and out.</p>
+          <p>£19.99</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="features-item">
+          <h3>Crêpes Suzette</h3>
+          <img src="img/specials/3.jpg" class="img-responsive" alt="special3">
+          <p>Suzette sauce of caramelized sugar and butter, tangerine, zest, marnier.
+          <p>£13.72</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Restaurant Menu Section -->
+<div id="restaurant-menu" style="width: '100vh'; padding-top: 0px;">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>Menu</h2>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="menu-section">
+          <h2 class="menu-section-title">Starters</h2>
+          <div class="menu-item">
+            <div class="menu-item-name">Tortellini Skewers</div>
+            <div class="menu-item-price"> £9 </div>
+            <div class="menu-item-description"> Simple Antipasto Tortellini Skewers with Lemon Basil Vinaigrette. </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Fried Ravioli</div>
+            <div class="menu-item-price"> £7 </div>
+            <div class="menu-item-description"> Cheese ravioli coated in seasoned breadcrumbs, then fried to golden brown perfection.</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Wild Mushroom Arancini</div>
+            <div class="menu-item-price"> £9 </div>
+            <div class="menu-item-description"> Mushroom risotto balls are deep-fried until golden and served with a vibrant pesto dip.</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Mozzarella Sticks</div>
+            <div class="menu-item-price"> £10 </div>
+            <div class="menu-item-description"> Cheese coated in seasoned breadcrumbs, then deep fried until golden brown and crispy. </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="menu-section">
+          <h2 class="menu-section-title">Main Courses</h2>
+          <div class="menu-item">
+            <div class="menu-item-name">Roast Stuffed Chicken</div>
+            <div class="menu-item-price"> £18 </div>
+            <div class="menu-item-description"> Moist chicken filled with mushroom and stuffing to the hearts content.</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Chicken & Mushroom Pasta</div>
+            <div class="menu-item-price"> £20 </div>
+            <div class="menu-item-description"> Uuper creamy white wine based sauce loaded with mushrooms and tender, perfectly seared chicken.</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Beef Lasagne</div>
+            <div class="menu-item-price"> £14 </div>
+            <div class="menu-item-description"> Traditional beef lasagne homemade including a slow cooked bolognese sauce, and bechamel sauce.</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Gormet Fried Chicken</div>
+            <div class="menu-item-price"> £19 </div>
+            <div class="menu-item-description"> Boneless chicken which tossed in a number of bespoke diner sauces.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="menu-section">
+          <h2 class="menu-section-title">Drinks</h2>
+          <div class="menu-item">
+            <div class="menu-item-name">Tea</div>
+            <div class="menu-item-price"> £3.20 </div>
+            <div class="menu-item-description"> Black, Herbal, Regular.</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Coffee</div>
+            <div class="menu-item-price"> £2.90 </div>
+            <div class="menu-item-description"> Latte, Cappuccino, Americano, Espresso.</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Wine</div>
+            <div class="menu-item-price"> £4.40 </div>
+            <div class="menu-item-description"> White, Rosé, Sparkling, Fortified.</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Soft Drinks</div>
+            <div class="menu-item-price"> £2 </div>
+            <div class="menu-item-description"> Coke, Sprite, Appletiser, Fanta, 7up.</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Water</div>
+            <div class="menu-item-price"> FREE </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="menu-section">
+          <h2 class="menu-section-title">Desserts</h2>
+          <div class="menu-item">
+            <div class="menu-item-name">Chocolate Mud Cake</div>
+            <div class="menu-item-price"> £8.80 </div>
+            <div class="menu-item-description"> Fluffy chocolate sponge iced with rich chocolate ganache.</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Bourbon-Pecan Tart</div>
+            <div class="menu-item-price"> £9.90 </div>
+            <div class="menu-item-description"> Beautiful pecans and wicked bourbon whiskey Southern American molasses.</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Texas Sheet Cake</div>
+            <div class="menu-item-price"> £11 </div>
+            <div class="menu-item-description"> Chocolate cake made in a jelly roll pan and covered in warm chocolate frosting.</div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">Vanilla Cheesecake</div>
+            <div class="menu-item-price"> £12 </div>
+            <div class="menu-item-description">  Classic creamy vanilla filling, and whipped cream on top!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About Section -->
+<div id="about" style="width: '100vh';">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 about-img"> </div>
+      <div class="col-xs-12 col-md-3 col-md-offset-1">
+        <div class="about-text">
+          <div class="section-title">
+            <h2>Our Story</h2>
+          </div>
+          <p>We are a restaurant born from a popular street vendor in the London that needed a new home, selling all kinds of takeaway dishes and transforming into an eat in luxury experience.</p>
+          <p>By sticking to our roots, we keep the orginal street food theme with new dishes that are made to wow customers. Parallax and the team would like to thank our customers for their key contributions in supporting the company during this important transition period.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Team Section -->
+<div id="about" style="width:'100vh'; padding-bottom: 0px;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-3 col-md-offset-1">
+        <div class="about-text">
+          <div class="section-title">
+            <h2>Meet Our Chef</h2>
+          </div>
+          <p>Arnaud Donckele is a chef who has earned three Michelin stars, making him the world’s youngest chef to be honored with the maximum number of stars. He produces tasty and ingenious dishes, a mix of flavors that collects the essence of good food and Mediterranean cuisine, in the restaurant managed by him you can choose from three tasting menus. One of these is called “The walk in the gardens“, thanks to which vegetarian guests can taste five dishes of haute cuisine with products collected from the garden of the restaurant, directly from the producer to the consumer. Well-known is the huge attention that chef Dounckele has for ingredients and food quality, which must be genuine and seasonal. Not only good food at the Vague d’Or the attention to detail is at home, a beautiful location by the sea elegant and fine, class and style associated with good food make it one of the places to visit at least once in a lifetime.</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6 about-img2"> </div>
+    </div>
+  </div>
+</div>
+<br></br>
+<header id="header" style="width: '100vh';">
+      <div class="intro2">
+        <div class="overlay">
+          <div class="container">
+            <div class="row">
+              <div class="intro-text">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+<!-- Contact Section -->
+<div id="contact" class="text-center" style="width:'100vh';">
+  <div class="container text-center">
+    <div class="col-md-4" style="width:'100vh';">
+      <h3>Bookings</h3>
+      <div class="contact-item">
+        <p>Please call</p>
+        <p>1234567890</p>
+      </div>
+    </div>
+    <div class="col-md-4" style="width:'100vh';">
+      <h3>Address</h3>
+      <div class="contact-item">
+        <p>34 Central Street</p>
+        <p>London, UK</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3>Opening Hours</h3>
+      <div class="contact-item">
+        <p>Mon-Fri: 9:00 AM - 8:00 PM</p>
+        <p>Sat-Sun: 11:00 AM - 09:00 PM</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section-title text-center">
+      <h3>Send us a message</h3>
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+      <form name="sentMessage" id="contactForm" novalidate>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+          <p class="help-block text-danger"></p>
+        </div>
+        <div id="success"></div>
+        <button type="submit" class="btn btn-custom btn-lg">Send Message</button>
+      </form>
+    </div>
+  </div>
+  <div class="container">
+    <div class="section-title text-center">
+      <h3></h3>
+    </div>
+    <div class="section-title text-center">
+      <div id="footer" class="col-md-8 col-md-offset-2">
+        <p>&copy; 2020 Made by <a href="https://matthew-harvey.github.io" rel="nofollow">Matthew Harvey</a></p>
+     </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+<script type="text/javascript" src="js/contact_me.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
