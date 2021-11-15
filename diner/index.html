@@ -293,9 +293,9 @@
                 var item = sessionStorage.getItem(key);
                 var itemsplit = item.split("£");
 
-                totalcost += parseFloat(itemsplit[1]);
                 var itemprice = "£" + itemsplit[1];
                 var itemquant = itemsplit[0];
+                totalcost += (parseFloat(itemsplit[1])*parseInt(itemquant));
 
                 var makemenu = document.createElement("div");
                 makemenu.classList.add('menu-item');
