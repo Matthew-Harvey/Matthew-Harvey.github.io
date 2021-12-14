@@ -111,22 +111,22 @@
     <div id="ordersection" class="row" style="border: 2px solid grey;">
       <h3 style="padding-bottom: 10px;">Select Items</h3>
       <div class="col-xs-6 col-sm-2">
-        <button type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(0, newarr)">Specials</button>
+        <button class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(0, newarr)" autofocus>Specials</button>
       </div>
       <div class="col-xs-6 col-sm-2">
-        <button type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(1, newarr)">Starters</button>
+        <button class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(1, newarr)">Starters</button>
       </div>
       <div class="col-xs-6 col-sm-2">
-        <button type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(2, newarr)">Mains</button>
+        <button class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(2, newarr)">Mains</button>
       </div>
       <div class="col-xs-6 col-sm-2">
-        <button type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(3, newarr)">Desserts</button>
+        <button class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(3, newarr)">Desserts</button>
       </div>
       <div class="col-xs-6 col-sm-2">
-        <button type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(4, newarr)">Drinks</button>
+        <button class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(4, newarr)">Drinks</button>
       </div>
       <div class="col-xs-6 col-sm-2">
-        <button type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(5, newarr)">My Order</button>
+        <button class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(5, newarr)">My Order</button>
       </div>
       <div id="container1" class="container" style="padding-top: 80px; padding-bottom: 0px;">
         <h2 id="mainname">Specials</h2>
@@ -211,17 +211,28 @@
               });
               if (ongoingcount == 0) {
                 var addbutton = document.createElement("button");
+                addbutton.classList.add("button-43")
                 addbutton.onclick = function () {ongoingcount+=1; addbutton.innerHTML = "ADDED " + ongoingcount + " ✓"; sessionStorage.setItem(item[0], ongoingcount.toString()+item[1])};
                 addbutton.innerHTML = "ADD TO ORDER"
                 makemenu.appendChild(addbutton);
               }
               else {
                 var addbutton = document.createElement("button");
+                addbutton.classList.add("button-43")
                 addbutton.onclick = function () {ongoingcount+=1; addbutton.innerHTML = "ADDED " + ongoingcount + " ✓"; sessionStorage.setItem(item[0], ongoingcount.toString()+item[1])};
                 addbutton.innerHTML = "ADDED " + ongoingcount + " ✓";
                 makemenu.appendChild(addbutton);
               }
             });
+          }
+
+          function delorderitem(sectionnum, newarr, itemkey) {
+            sessionStorage.removeItem(itemkey);
+            const myNode = document.getElementById("menuholder");
+            while (myNode.firstChild) {
+              myNode.removeChild(myNode.lastChild);
+            }
+            showorder(sectionnum, newarr);
           }
 
           function showorder(sectionnum, newarr) {
@@ -240,25 +251,41 @@
             makemenu.appendChild(brgap);
 
             var namecolumn = document.createElement("div");
-            namecolumn.classList.add('col-lg-4');
+            namecolumn.classList.add('col-lg-3');
             namecolumn.classList.add('col-sm-12');
             namecolumn.classList.add('col-md-12');
             namecolumn.id = "eachmenu";
             makemenuhold.appendChild(namecolumn);
 
             var pricecolumn = document.createElement("div");
-            pricecolumn.classList.add('col-lg-4');
+            pricecolumn.classList.add('col-lg-3');
             pricecolumn.classList.add('col-sm-12');
             pricecolumn.classList.add('col-md-12');
             pricecolumn.id = "eachmenu";
             makemenuhold.appendChild(pricecolumn);
 
             var quantcolumn = document.createElement("div");
-            quantcolumn.classList.add('col-lg-4');
+            quantcolumn.classList.add('col-lg-3');
             quantcolumn.classList.add('col-sm-12');
             quantcolumn.classList.add('col-md-12');
             quantcolumn.id = "eachmenu";
             makemenuhold.appendChild(quantcolumn);
+
+            var removecolumn = document.createElement("div");
+            removecolumn.classList.add('col-lg-3');
+            removecolumn.classList.add('col-sm-12');
+            removecolumn.classList.add('col-md-12');
+            removecolumn.id = "eachmenu";
+            makemenuhold.appendChild(removecolumn);
+
+            var removeheader = document.createElement("div");
+            removeheader.classList.add('menu-item-name');
+            removecolumn.appendChild(removeheader);
+            var h4wrap4 = document.createElement("h4");
+            removeheader.appendChild(h4wrap4);
+            var underline4 = document.createElement("u");
+            underline4.innerHTML = "REMOVE";
+            h4wrap4.appendChild(underline4);
 
             var menuitemname = document.createElement("div");
             menuitemname.classList.add('menu-item-name');
@@ -307,25 +334,38 @@
                 makemenu.appendChild(brgap);
 
                 var namecolumn = document.createElement("div");
-                namecolumn.classList.add('col-lg-4');
+                namecolumn.classList.add('col-lg-3');
                 namecolumn.classList.add('col-sm-12');
                 namecolumn.classList.add('col-md-12');
                 namecolumn.id = "eachmenu";
                 makemenuhold.appendChild(namecolumn);
 
                 var pricecolumn = document.createElement("div");
-                pricecolumn.classList.add('col-lg-4');
+                pricecolumn.classList.add('col-lg-3');
                 pricecolumn.classList.add('col-sm-12');
                 pricecolumn.classList.add('col-md-12');
                 pricecolumn.id = "eachmenu";
                 makemenuhold.appendChild(pricecolumn);
 
                 var quantcolumn = document.createElement("div");
-                quantcolumn.classList.add('col-lg-4');
+                quantcolumn.classList.add('col-lg-3');
                 quantcolumn.classList.add('col-sm-12');
                 quantcolumn.classList.add('col-md-12');
                 quantcolumn.id = "eachmenu";
                 makemenuhold.appendChild(quantcolumn);
+
+                var removecolumn = document.createElement("div");
+                removecolumn.classList.add('col-lg-3');
+                removecolumn.classList.add('col-sm-12');
+                removecolumn.classList.add('col-md-12');
+                removecolumn.id = "eachmenu";
+                makemenuhold.appendChild(removecolumn);
+
+                var removebutton = document.createElement("button");
+                removebutton.classList.add("button-34")
+                removebutton.onclick = function(){ delorderitem(sectionnum, newarr, key) };
+                removebutton.innerHTML = "X";
+                removecolumn.appendChild(removebutton);
 
                 var menuitemname = document.createElement("div");
                 menuitemname.classList.add('menu-item-name');
