@@ -106,27 +106,27 @@
 <div id="order" class="text-center" style="width:'100vh'; padding-top: 50px; padding-bottom: 50px;">
   <div class="container">
     <div class="section-title">
-      <h2>Order Here</h2>
+      <h2>Pickup Orders</h2>
     </div>
     <div id="ordersection" class="row" style="border: 2px solid grey;">
       <h3 style="padding-bottom: 10px;">Select Items</h3>
       <div class="col-xs-6 col-sm-2">
-        <button class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(0, newarr)" autofocus>Specials</button>
+        <button id="specials" class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(0, newarr)">Specials</button>
       </div>
       <div class="col-xs-6 col-sm-2">
-        <button class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(1, newarr)">Starters</button>
+        <button id="starters" class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(1, newarr)">Starters</button>
       </div>
       <div class="col-xs-6 col-sm-2">
-        <button class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(2, newarr)">Mains</button>
+        <button id="mains" class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(2, newarr)">Mains</button>
       </div>
       <div class="col-xs-6 col-sm-2">
-        <button class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(3, newarr)">Desserts</button>
+        <button id="desserts" class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(3, newarr)">Desserts</button>
       </div>
       <div class="col-xs-6 col-sm-2">
-        <button class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(4, newarr)">Drinks</button>
+        <button id="drinks" class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(4, newarr)">Drinks</button>
       </div>
       <div class="col-xs-6 col-sm-2">
-        <button class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(5, newarr)">My Order</button>
+        <button id="myorder" class="button-34" type="button" style="width: 131px; height: 46px;" onclick="popoutoptions(5, newarr)">My Order</button>
       </div>
       <div id="container1" class="container" style="padding-top: 80px; padding-bottom: 0px;">
         <h2 id="mainname">Specials</h2>
@@ -139,31 +139,58 @@
 
         popoutoptions(0, newarr);
 
+        function resetcolors () {
+          document.getElementById("specials").style.backgroundColor = "#ef4d47"
+          document.getElementById("starters").style.backgroundColor = "#ef4d47"
+          document.getElementById("mains").style.backgroundColor = "#ef4d47"
+          document.getElementById("desserts").style.backgroundColor = "#ef4d47"
+          document.getElementById("drinks").style.backgroundColor = "#ef4d47"
+          document.getElementById("myorder").style.backgroundColor = "#ef4d47"
+        }
+
         function popoutoptions(sectionnum, newarr) {
           sectionnum = sectionnum.toString();
           if (sectionnum == "0") {
             mainname.innerHTML = "Specials";
+            resetcolors()
+            makeblack = document.getElementById("specials");
+            makeblack.style.backgroundColor = "black";
             showitems(sectionnum, newarr);
           }
           if (sectionnum == "1") {
             mainname.innerHTML = "Starters";
+            resetcolors()
+            makeblack = document.getElementById("starters");
+            makeblack.style.backgroundColor = "black";
             showitems(sectionnum, newarr);
           }
 
           if (sectionnum == "2") {
             mainname.innerHTML = "Mains";
+            resetcolors()
+            makeblack = document.getElementById("mains");
+            makeblack.style.backgroundColor = "black";
             showitems(sectionnum, newarr);
           }
           if (sectionnum == "3") {
             mainname.innerHTML = "Desserts";
+            resetcolors()
+            makeblack = document.getElementById("desserts");
+            makeblack.style.backgroundColor = "black";
             showitems(sectionnum, newarr);
           }
           if (sectionnum == "4") {
             mainname.innerHTML = "Drinks";
+            resetcolors()
+            makeblack = document.getElementById("drinks");
+            makeblack.style.backgroundColor = "black";
             showitems(sectionnum, newarr);
           }
           if (sectionnum == "5") {
             mainname.innerHTML = "My Order";
+            resetcolors()
+            makeblack = document.getElementById("myorder");
+            makeblack.style.backgroundColor = "black";
             showorder(sectionnum, newarr);
           }
 
