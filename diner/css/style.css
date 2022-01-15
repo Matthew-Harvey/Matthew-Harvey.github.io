@@ -168,6 +168,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	display: table;
 	padding: 0;
 	background: url('../img/intro-bg.jpg') center center no-repeat;
+	background-size: contain;
 	background-color: #e5e5e5;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -206,6 +207,7 @@ header .intro-text {
 	width: 100%;
 	padding: 0;
 	background: url('../img/map_smaller_diner.JPG') center center no-repeat;
+	background-size: contain;
 	background-color: #e5e5e5;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -277,11 +279,13 @@ header .intro2-text {
 #about .about-img {
 	background: #444 url('../img/gallery-bg.jpg') center center no-repeat;
 	background-size: cover;
+	background-size: contain;
 	height: 650px;
 }
 #about .about-img2 {
 	background: #444 url('../img/headchefimg.png') right center no-repeat;
 	background-size: cover;
+	background-size: contain;
 	float: right;
 	height: 650px;
 }
