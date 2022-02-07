@@ -353,6 +353,20 @@ a:hover {
   color: rgba(0, 0, 0, 0.5);
 }
 
+.fh5co-social-icons li {
+  transition: all .2s ease-in-out; 
+}
+.fh5co-social-icons li:hover { 
+  transform: scale(1.3); 
+}
+
+.tablinks {
+    transition: all .2s ease-in-out; 
+}
+.tablinks:hover { 
+  transform: scale(1.2); 
+}
+
 .fh5co-social-icons {
   margin: 0;
   padding: 0;
