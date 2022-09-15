@@ -50,8 +50,8 @@
 					<div class="display-t js-fullheight">
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
 							<h1 class="section-title" style="transform: scale(1.3);">Matthew Harvey</h1>
-							<div class="profile-thumb" style="background: url(images/user-3.webp);"></div>
 							<h3 style="transform: scale(1.3);"><span>Software Developer</span></h3>
+							<img alt="mainimg" src="/main_img/title_img.webp" align="center" width="50%" height="auto">
 							<p>
 								<ul class="fh5co-social-icons">
 									<li><a href="https://www.linkedin.com/in/m-harvey/" style="transform: scale(1.1);" aria-label="Linkedin" target="_blank" rel="noopener"><i class="icon-linkedin2"></i></a></li>
@@ -72,35 +72,28 @@
 	<div id="about" class="animate-box">
 		<div class="container text-center">
 			<div class="row">
-				<div class="col-md-12 text-center fh5co-heading">
+				<div class="col-md-12 text-center fh5co-heading animate-box">
 					<br></br>
 					<h2 style="transform: scale(1.2);">About Me</h2>
-					<p>Based in Leicester, UK with over a year of previous experience in an Agile Development Team to regularly complete requirements; additional revelant customer service experience in a large operation.</p>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-6 col-md-offset-0">
-					<ul class="info text-center" style="transform: scale(1.1);">
-						<li><span class="second-block">Matthew Harvey</span></li>
-						<li><span class="second-block">Leicester, England</span></li>
-						<li><span class="second-block"><a href="https://mharvey.netlify.app/MatthewHarvey-CV.pdf" target="_blank"  rel="noopener"><i class="icon-download2"></i> View CV</a></span></li>
-					</ul>
+			<div class="row container animate-box">
+				<div class="col-md-5 text-center" style="height: 300px;">
+					<img alt="aboutimg" src="/main_img/about_img.png" align="center" width="50%" height="auto">
 				</div>
-				<div class="col-md-6 col-md-offset-0">
-					<ul class="info text-center" style="transform: scale(1.1);">
-						<li><span class="second-block"><a href="https://github.com/Matthew-Harvey" target="_blank"  rel="noopener"><i class="icon-github2"></i> Matthew-Harvey</a></span></li>
-						<li><span class="second-block"><a href="https://www.linkedin.com/in/m-harvey/" target="_blank"  rel="noopener"><i class="icon-linkedin2"></i> m-harvey</a></span></li>
-						<li><span class="second-block"><a href="mailto:matthewtlharvey@gmail.com" target="_top"  rel="noopener"><i class="icon-mail2"></i> matthewtlharvey@gmail.com</a></span></li>
-					</ul>
+				<div class="col-md-7 text-left">
+					<p style="font-size: 18px;">Software Developer with over a year of previous experience in an Agile Development Team to regularly complete requirements; additional revelant customer service experience in a large operation.</p>
+					<button class="tablinks" onClick="document.getElementById('contact').scrollIntoView()">Get In Touch</button> 
 				</div>
 			</div>
-			<br></br>
+			<br />
 			<div class="col-md-12 col-md-offset-0 text-center fh5co-heading">
-				<img src="https://ghchart.rshah.org/Matthew-Harvey" alt="Matthew Harvey Github chart" width="90%" height="90%" style="margin-top: 20px;"></li>
+				<img src="https://ghchart.rshah.org/Matthew-Harvey" alt="Matthew Harvey Github chart" width="90%" height="90%"></li>
 				<output id="dateandtime">Time</output>
 			</div>
 		</div>
 	</div>
+	<br />
 	<div id="skills" class="animate-box">
 		<div class="container">
 		  <div class="row">
@@ -454,12 +447,19 @@
 				  background-color: black;
 				}
 				</style>
-				<form name="contact" method="POST" data-netlify="true">
-					<input type="text" name="name" placeholder="Name" required>
-					<input type="text" name="email" placeholder="Email" required>
-					<textarea id="subject" name="subject" placeholder="Message..." style="height:200px"></textarea>
-					<input type="submit" value="Submit">
-				</form>
+				<div class="row">
+					<div class="col-sm-8 fh5co-heading">
+						<form name="contact" method="POST" data-netlify="true">
+							<input type="text" name="name" placeholder="Name" required>
+							<input type="text" name="email" placeholder="Email" required>
+							<textarea id="subject" name="subject" placeholder="Message..." style="height:200px"></textarea>
+							<input type="submit" value="Submit">
+						</form>
+					</div>
+					<div class="col-sm-4 text-center fh5co-heading" style="margin: auto;">
+						<img alt="mainimg" src="/main_img/contact_img.png" align="center" width="99%" height="auto">
+					</div>
+				  </div>
 				</div>
 			  </div>
 			</div>
@@ -477,6 +477,8 @@
 								<li><a href="mailto:matthewtlharvey@gmail.com" style="transform: scale(1.1); color: black;"aria-label="mailto" target="_blank" rel="noopener"><i class="icon-mail2" style="color: black;"></i></a></li>
 								<li><a href="https://mharvey.netlify.app/MatthewHarvey-CV.pdf" style="transform: scale(1.1); color: black;" aria-label="CV" target="_blank" rel="noopener"><i class="icon-download2" style="color: black;"></i></a></li>
 							</ul>
+							<br />
+							<button class="tablinks" onClick="document.getElementById('page').scrollIntoView()">Back To Top</button> 
 						</div>
 					</div>
 				</div>
