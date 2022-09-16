@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" href="https://mharvey.netlify.app/icon3.png">
 
-		<meta name="description" property='og:description' content="My portfolio website.">
+		<meta name="description" property='og:description' content="Software Developer Portfolio">
 		<meta name="author" content="Matthew Harvey">
 		<meta name="Keywords" content="Portfolio">
 
@@ -83,7 +83,7 @@
 				</div>
 				<div class="col-md-7 text-left">
 					<p style="font-size: 18px;">Software Developer with over a year of previous experience in an Agile Development Team to regularly complete requirements; additional revelant customer service experience in a large operation.</p>
-					<button class="tablinks" onClick="document.getElementById('contact').scrollIntoView()">Get In Touch</button> 
+					<button class="tablinks" style="margin-bottom: 10px;" onclick="document.getElementById('contact').scrollIntoView()">Get In Touch</button> 
 				</div>
 			</div>
 			<br />
@@ -94,27 +94,28 @@
 		</div>
 	</div>
 	<br />
-	<div id="skills" class="animate-box">
+	<div id="skills" class="fh5co-bg-dark animate-box" style="padding-bottom: 20px;">
 		<div class="container">
 		  <div class="row">
-			<div class="col-md-12 text-center fh5co-heading" style="margin-bottom: 20px;">
-			  <h2 class="section-title" style="transform: scale(1.2);">Technical Skills</h2>
+			<div class="col-md-12 text-center fh5co-heading" style="margin-bottom: 25px;">
+				<br />
+				<h2 class="section-title" style="transform: scale(1.2);">Technical Skills</h2>
 			</div>
 			<br></br>
 			<div class="skill_tab-content" id="coding">
-				<div class="skill-set">
+				<div class="skill-set fh5co-blog animate-box" style="background-color: white;">
 					<div class="container text-center">
 						<div class="skill-set">
 						  <i class="fa fa-cogs"></i>
-						  <h3 style="transform: scale(1.1);"><u>Languages</u></h3>
+						  <h3 style="transform: scale(1.1); padding-top: 30px;"><u>Languages</u></h3>
 						  <div class="row">
 							  <div class="col-sm-2 text-center">
-								<i class="devicon-python-plain colored" style="font-size: 60px;"></i>
+								<i class="expand devicon-python-plain colored" style="font-size: 60px;"></i>
 								<h4>Python</h4>
 							  </div>
 							  <div class="col-sm-2 text-center">
 								<i class="devicon-php-plain colored" style="font-size: 60px;"></i>
-						  		<h4>PHP</h4>
+								<h4>PHP</h4>
 							  </div>
 							  <div class="col-sm-2 text-center">
 								<i class="devicon-java-plain colored" style="font-size: 60px;"></i>
@@ -169,7 +170,7 @@
 					  </div>
 				    </div>
 					<br></br>
-					<div class="container text-center">
+					<div style="margin-bottom: 30px;"class="container text-center">
 						<div class="skill-set">
 						  <i class="fa fa-cogs"></i>
 						  <h3 style="transform: scale(1.1);"><u>Other</u></h3>
@@ -202,14 +203,16 @@
 			  </div>
 		  </div>
 		 </div>
-		<br></br>
 		</div>
 	  </section>
 	  <div id="employ" class="fh5co-bg-color">
+		<div class="col-md-12 text-center fh5co-heading animate-box" style="margin-bottom: 20px;">
+			<br />
+			<h2 class="section-title" style="transform: scale(1.2);">Timeline</h2>
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0">
-					<br></br>
 					<ul class="timeline">
 						<li class="timeline-heading text-center animate-box">
 							<div><h3 style="transform: scale(1.2);">Employment History</h3></div>
@@ -255,6 +258,9 @@
 									<a href="https://www.dmu.ac.uk/" target="_blank" rel="noopener"><img alt="dmu" align="center" width="30%" height="100%" src="images/small_img/dmu_opt.webp" style="margin-top: 10px;"/></a>
 									<br></br>
 									<span class="company"><a href="https://www.dmu.ac.uk/" target="_blank" rel="noopener">De Montfort University,  Projected 2024</a></span>
+									<br />
+									<h4>Related Modules:</h4>
+									<p>Object Oriented Development, Agile Team Development, Data Structures and Algorithms, Web Application Development...</p>
 								</div>
 								<div class="timeline-body">
 								</div>
@@ -272,8 +278,16 @@
 								</div>
 							</div>
 						</li>
-						<br></br>
 					</ul>
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<form action="https://mharvey.netlify.app/MatthewHarvey-CV.pdf" target="_blank">
+								<button type="submit" class="tablinks" href="https://mharvey.netlify.app/MatthewHarvey-CV.pdf">View CV</button> 
+							</form>
+						</div>
+					</div>
+					<br />
+					<br />
 				</div>
 			</div>
 		</div>
@@ -288,97 +302,110 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-md-offset-0">
-					<div class="fh5co-blog animate-box" style="width: 100%; height: 100%;">
-						<img alt="mymovies background" class="blog-bg" src="images/mymovies_desktop.png"></img>
+					<div class="fh5co-blog animate-box"  style="width: 100%; height: 100%;">
 						<div class="blog-text">
-							<h3>MyMovies</h3>
-							<ul class="stuff">
-								<img id="response" src="images/all_devices_mymovies.jpg" alt="alldevice mymovies" width="300px" height="85px"></img>
-							</ul>
-							<ul class="stuff">
-								<p></p>
-								<a style="font-size: 20px; margin-right: 40px;" href="https://mharvey-movies.herokuapp.com/" target="_blank" style="margin-right: 30px;" rel="noopener">Live Demo</a>
-								<a style="font-size: 20px;" href="https://github.com/Matthew-Harvey/MyMovies" target="_blank" rel="noopener">GitHub</a>
-								<p></p>
-							</ul>
-							<p>Movie site made using TMDb API that allows users to search new movies and actors, create lists and answer trivia questions.</p>
-							<i title="Heroku" class="devicon-heroku-original colored" style="font-size: 60px;"></i>
-							<i title="C#" class="devicon-csharp-plain colored" style="font-size: 60px;"></i>
-							<i title=".NET" class="devicon-dotnetcore-plain colored" style="font-size: 60px;"></i>
-							<i title="JavaScript" class="devicon-javascript-plain colored" style="font-size: 60px;"></i>
-							<i title="Bootstrap" class="devicon-bootstrap-plain colored" style="font-size: 60px;"></i>
-							<i title="HTML" class="devicon-html5-plain colored" style="font-size: 60px;"></i>
-							<i title="CSS" class="devicon-css3-plain colored" style="font-size: 60px;"></i>
+							<div class="col-md-8">
+								<h3>MyMovies</h3>
+							</div>
+							<div class="col-md-2 expand">
+								<span><a style="font-size: 20px;" href="https://mharvey-movies.herokuapp.com/" target="_blank" rel="noopener"><svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></span>
+							</div>
+							<div class="col-md-2 expand">
+								<span><a style="font-size: 20px;" href="https://github.com/Matthew-Harvey/MyMovies" target="_blank" rel="noopener"><svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a></span>
+							</div>
+							<img alt="mymovies background" style="padding-bottom: 20px;" class="blog-bg" src="images/mymovies_desktop.png" width="auto" height="auto"></img>
+							<div class= "col-md-6">
+								<img id="response" align="center" src="images/all_devices_mymovies.jpg" alt="alldevice mymovies" width="auto" height="75px"></img>
+							</div>
+							<div class="col-md-12">
+								<p style="padding-top: 20px;">Movie site made using TMDb API that allows users to search new movies and actors, create lists and answer trivia questions. Deployed to Heroku, takes time to spin up.</p>
+							</div>
+							<div class="col-md-12">
+								<span class="label label-default" style="background-color: #2a2c2e;"><h7 style="color: white;">HTML/CSS/JS</h7></span>
+								<span class="label label-primary" style="background-color: #2a2c2e;"><h7 style="color: white;">Bootstrap</h7></span>
+								<span class="label label-primary" style="background-color: #2a2c2e;"><h7 style="color: white;">C#/.NET</h7></span>
+							</div>
 						</div> 
 					</div>
 				</div>
 				<div class="col-md-6 col-md-offset-0">
-					<div class="fh5co-blog animate-box" style="width: 100%; height: 100%;">
-						<img alt="spoura background" class="blog-bg" src="images/spoura_desktop.webp"></img>
+					<div class="fh5co-blog animate-box"  style="width: 100%; height: 100%;">
 						<div class="blog-text">
-							<h3>Spoura</h3>
-							<ul class="stuff">
-								<img id="response" src="images/small_img/all_devices_spoura.webp" alt="alldevice spoura" width="300px" height="85px"></img>
-							</ul>
-							<ul class="stuff">
-								<p></p>
-								<a id="web1" style="font-size: 20px; margin-right: 40px;" href="https://mharvey.netlify.app/ecommerce/" target="_blank" style="margin-right: 30px;" rel="noopener">Live Demo</a>
-								<a id="web2" style="font-size: 20px;" href="https://github.com/Matthew-Harvey/Spoura-Ecommerce" target="_blank" rel="noopener">GitHub</a>
-								<p></p>
-							</ul>
-							<p>A business site that acts as an online shop for clothing and other various items. Modelled off existing Ecommerce stores.</p>
-							<i title="HTML" class="devicon-html5-plain colored" style="font-size: 60px;"></i>
-							<i title="CSS" class="devicon-css3-plain colored" style="font-size: 60px;"></i>
-							<i title="JavaScript" class="devicon-javascript-plain colored" style="font-size: 60px;"></i>
-							<i title="Bootstrap" class="devicon-bootstrap-plain colored" style="font-size: 60px;"></i>
-							<i title="PHP" class="devicon-php-plain colored" style="font-size: 60px;"></i>
+							<div class="col-md-8">
+								<h3>Spoura</h3>
+							</div>
+							<div class="col-md-2 expand">
+								<span><a style="font-size: 20px;" href="https://mharvey.netlify.app/ecommerce/" target="_blank" rel="noopener"><svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></span>
+							</div>
+							<div class="col-md-2 expand">
+								<span><a style="font-size: 20px;" href="https://github.com/Matthew-Harvey/Spoura-Ecommerce" target="_blank" rel="noopener"><svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a></span>
+							</div>
+							<img alt="spoura background" style="padding-bottom: 20px;" class="blog-bg" src="images/spoura_desktop.webp" width="auto" height="auto"></img>
+							<div class= "col-md-6">
+								<img id="response" align="center" src="images/small_img/all_devices_spoura.webp" alt="alldevice Spoura" width="auto" height="auto"></img>
+							</div>
+							<div class="col-md-12">
+								<p style="padding-top: 20px;">A business site that acts as an online shop for clothing and other various items. Modelled off existing Ecommerce stores; features carts and search functionality.</p>
+							</div>
+							<div class="col-md-12">
+								<span class="label label-default" style="background-color: #2a2c2e;"><h7 style="color: white;">HTML/CSS/JS</h7></span>
+								<span class="label label-primary" style="background-color: #2a2c2e;"><h7 style="color: white;">Bootstrap</h7></span>
+								<span class="label label-primary" style="background-color: #2a2c2e;"><h7 style="color: white;">PHP</h7></span>
+							</div>
 						</div> 
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-md-offset-0">
-					<div class="fh5co-blog animate-box" style="width: 100%; height: 100%;">
-						<img alt="parallax background" class="blog-bg" src="images/parallax_desktop.webp"></img>
+					<div class="fh5co-blog animate-box"  style="width: 100%; height: 100%;">
 						<div class="blog-text">
-							<h3>Parallax Diner</h3>
-							<ul class="stuff">
-								<img id="response" src="images/small_img/all_devices_parallax.webp" alt="alldevice parallax" width="300px" height="85px"></img>
-							</ul>
-							<ul class="stuff">
-								<p></p>
-								<a style="font-size: 20px; margin-right: 40px;" href="https://mharvey.netlify.app/diner" target="_blank" rel="noopener">Live Demo</a>
-								<a style="font-size: 20px;" href="https://github.com/Matthew-Harvey/parallax_diner" target="_blank" rel="noopener">GitHub</a>
-								<p></p>
-							</ul>
-							<p>This site is made for a cooking business to market their menu and features ordering online. Built to increase overall traffic for the company.</p>
-							<i title="HTML" class="devicon-html5-plain colored" style="font-size: 60px;"></i>
-							<i title="CSS" class="devicon-css3-plain colored" style="font-size: 60px;"></i>
-							<i title="JavaScript" class="devicon-javascript-plain colored" style="font-size: 60px;"></i>
-							<i title="Bootstrap" class="devicon-bootstrap-plain colored" style="font-size: 60px;"></i>
-							<i title="Python" class="devicon-python-plain colored" style="font-size: 60px;"></i>
-							<i title="Flask" class="devicon-flask-original colored" style="font-size: 60px;"></i>
+							<div class="col-md-8">
+								<h3>Parallax Diner</h3>
+							</div>
+							<div class="col-md-2 expand">
+								<span><a style="font-size: 20px;" href="https://mharvey.netlify.app/diner" target="_blank" rel="noopener"><svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></span>
+							</div>
+							<div class="col-md-2 expand">
+								<span><a style="font-size: 20px;" href="https://github.com/Matthew-Harvey/parallax_diner" target="_blank" rel="noopener"><svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a></span>
+							</div>
+							<img alt="diner background" style="padding-bottom: 20px;" class="blog-bg" src="images/parallax_desktop.webp" width="auto" height="auto"></img>
+							<div class= "col-md-6">
+								<img id="response" align="center" src="images/small_img/all_devices_parallax.webp" alt="alldevice Diner" width="auto" height="auto"></img>
+							</div>
+							<div class="col-md-12">
+								<p style="padding-top: 20px;">This site is made for a cooking business to market their menu and features ordering online. Built to increase overall traffic for the company.</p>
+							</div>
+							<div class="col-md-12">
+								<span class="label label-default" style="background-color: #2a2c2e;"><h7 style="color: white;">HTML/CSS/JS</h7></span>
+								<span class="label label-primary" style="background-color: #2a2c2e;"><h7 style="color: white;">Bootstrap</h7></span>
+								<span class="label label-primary" style="background-color: #2a2c2e;"><h7 style="color: white;">Python (Flask)</h7></span>
+							</div>
 						</div> 
 					</div>
 				</div>
 				<div class="col-md-6 col-md-offset-0">
 					<div class="fh5co-blog animate-box"  style="width: 100%; height: 100%;">
-						<img alt="chess background" class="blog-bg" src="images/Chess_picture.webp"></img>
 						<div class="blog-text">
-							<h3>Chess</h3>
-							<ul class="stuff">
-								<img id="response" src="images/small_img/all_devices_chess.webp" alt="alldevice chess" width="300px" height="85px"></img>
-							</ul>
-							<ul class="stuff">
-								<p></p>
-								<a style="font-size: 20px; margin-right: 40px;" href="https://mharvey.netlify.app/chess" target="_blank" style="margin-right: 30px;" rel="noopener">Live Demo</a>
-								<a style="font-size: 20px;" href="https://github.com/Matthew-Harvey/Chess" target="_blank" rel="noopener">GitHub</a>
-								<p></p>
-							</ul>
-							<p>Site that allows users to play chess in various ways including 2 player, Vs Computer, watch bots play chess and complete daily, featured puzzles.</p>
-							<i title="HTML" class="devicon-html5-plain colored" style="font-size: 60px;"></i>
-							<i title="CSS" class="devicon-css3-plain colored" style="font-size: 60px;"></i>
-							<i title="JavaScript" class="devicon-javascript-plain colored" style="font-size: 60px;"></i>
+							<div class="col-md-8">
+								<h3>Chess</h3>
+							</div>
+							<div class="col-md-2 expand">
+								<span><a style="font-size: 20px;" href="https://mharvey.netlify.app/chess" target="_blank" rel="noopener"><svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></span>
+							</div>
+							<div class="col-md-2 expand">
+								<span><a style="font-size: 20px;" href="https://github.com/Matthew-Harvey/Chess" target="_blank" rel="noopener"><svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a></span>
+							</div>
+							<img alt="chess background" style="padding-bottom: 20px;" class="blog-bg" src="images/Chess_picture.webp" width="auto" height="auto"></img>
+							<div class= "col-md-6">
+								<img id="response" align="center" src="images/small_img/all_devices_chess.webp" alt="alldevice chess" width="auto" height="auto"></img>
+							</div>
+							<div class="col-md-12">
+								<p style="padding-top: 20px;">Site that allows users to play chess in various ways including 2 player, Vs Computer, watch bots play chess and complete daily, featured puzzles.</p>
+							</div>
+							<div class="col-md-12">
+								<span class="label label-default" style="background-color: #2a2c2e;"><h7 style="color: white;">HTML/CSS/JS</h7></span>
+							</div>
 						</div> 
 					</div>
 				</div>
@@ -392,25 +419,30 @@
 					<h2 style="transform: scale(1.2);">Extras</h2>
 				</div>
 			</div>
-			<div class="fh5co-blog animate-box" style="width: 100%; height: 100%;">
-				<img alt="jschallenge background" class="blog-bg" src="images/small_img/homepage.png"></img>
+			<div class="fh5co-blog animate-box"  style="width: 100%; height: 100%;">
 				<div class="blog-text">
-					<h3>Mini Coding Challenges</h3>
-					<ul class="stuff">
-						<img id="response" src="images/all_devices_minichallenge.jpg" alt="alldevice jschallenge" width="300px" height="85px"></img>
-					</ul>
-					<ul class="stuff">
-						<p></p>
-						<a style="font-size: 20px; margin-right: 40px;" href="https://mharvey-jschallenges.netlify.app" target="_blank" rel="noopener">Live Demo</a>
-						<a style="font-size: 20px;" href="https://github.com/Matthew-Harvey/MiniChallenges" target="_blank" rel="noopener">GitHub</a>
-						<p></p>
-					</ul>
-					<p>Some of the top JavaScript challenges and respective solutions.</p>
-					<i title="HTML" class="devicon-html5-plain colored" style="font-size: 60px;"></i>
-					<i title="CSS" class="devicon-css3-plain colored" style="font-size: 60px;"></i>
-					<i title="JavaScript" class="devicon-javascript-plain colored" style="font-size: 60px;"></i>
-					<i title="Bootstrap" class="devicon-bootstrap-plain colored" style="font-size: 60px;"></i>
-				</div>
+					<div class="col-md-8">
+						<h3>Mini Coding Challenges</h3>
+					</div>
+					<div class="col-md-2 expand">
+						<span><a style="font-size: 20px;" href="https://mharvey-jschallenges.netlify.app" target="_blank" rel="noopener"><svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/></svg></a></span>
+					</div>
+					<div class="col-md-2 expand">
+						<span><a style="font-size: 20px;" href="https://github.com/Matthew-Harvey/MiniChallenges" target="_blank" rel="noopener"><svg width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a></span>
+					</div>
+					<div class= "col-md-6">
+						<img alt="challenge background" style="padding-bottom: 20px;" class="blog-bg" src="images/small_img/homepage.png" width="auto" height="300px"></img>
+					</div>
+					<div class= "col-md-12">
+						<img id="response" align="center" src="images/all_devices_minichallenge.jpg" alt="alldevice challenge" width="auto" height="75px"></img>
+					</div>
+					<div class="col-md-12">
+						<p style="padding-top: 20px;">Some of the top JavaScript challenges and their respective solutions.</p>
+					</div>
+					<div class="col-md-12">
+						<span class="label label-default" style="background-color: #2a2c2e;"><h7 style="color: white;">HTML/CSS/JS</h7></span>
+					</div>
+				</div> 
 			</div>
 		</div>
 	</div>
@@ -493,7 +525,6 @@
 		var dateTime = time+' '+date;
 		document.getElementById("dateandtime").value = dateTime;
 	</script>
-	<script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js" integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
