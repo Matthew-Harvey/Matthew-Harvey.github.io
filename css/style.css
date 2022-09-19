@@ -364,17 +364,25 @@ a:hover {
   transform: scale(1.3); 
 }
 
-.expand{
+.small-expand{
   transition: all .2s ease-in-out;
 }
-.expand:hover{
-  transform: scale(1.3); 
+.small-expand:hover{
+  transform: scale(1.05); 
 }
 
 .tablinks {
   transition: all .2s ease-in-out; 
 }
 .tablinks:hover { 
+  transform: scale(1.3); 
+}
+
+.expand{
+  transition: all .2s ease-in-out; 
+}
+
+.expand:hover { 
   transform: scale(1.3); 
 }
 
@@ -1446,3 +1454,10 @@ input[type="text"] {
         outline: none;
       }
 
+
+.hover-colour{
+  fill: black;
+}
+.hover-colour:hover{
+  fill: darkgray;
+}
