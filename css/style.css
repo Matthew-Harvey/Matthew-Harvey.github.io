@@ -1461,3 +1461,19 @@ input[type="text"] {
 .hover-colour:hover{
   fill: darkgray;
 }
+
+.know-more {
+  background-color: darkorange;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-top: 5px;
+  margin: 5px;
+}
+
+.know-more:hover {
+  transform: scale(1.2);
+}
